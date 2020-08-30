@@ -51,11 +51,15 @@ If we take a look,the 25% corresponds to 1942 so we could think the begginig of 
 
 
 
+Rename columns and strip
    
 
 
 3. Use at least 5 data cleaning techniques inside a file named `clean.ipynb`
    - null values, columns drop, duplicated data, string manipulation, apply fn, categorize, regex, etc.
+   
+   
+   
 4. Show data that validates the conclusions based on your hypotesis in a file named `analysis.ipynb`
 
 
