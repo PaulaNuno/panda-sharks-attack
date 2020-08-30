@@ -12,9 +12,6 @@ Since 1975, when Jaws was released, the white shark has been reknowed as the mos
 Let's see if that's true :)
 
 
-The idea is to focus on 3 series of pd, name of the DataFrame: 
-Year, Injury and Species.
-
 I have to select the injury cases provoked by whithe sharks resulting in death.
 Once I got them, I need to sort them by year.
 Finally, I'm displaying a graph with the deaths caused by white sharks each year.
@@ -24,22 +21,38 @@ Finally, I'm displaying a graph with the deaths caused by white sharks each year
 
 2. Explore the data and write down what you have found
    - you can use: `df.describe()`, `df["column"]`, etc.
+ 
+df.shape = 25723 rows, 24 series
+
+There are some hidden series between "Sex" and "Species" that can't be seen in the raw DataFrame.
+
+We check df.info() and we find the series must be analized taking into account the aim of the project:
+
+Year (float)
+Injury (object)
+Fatal (Y/N) (object)
+Species (object)
+
+When analising the technical info the first thing that grabs my attention is the large number of nulls.
+The file has almost 26000 (25723) entries and the number of non nulls in the series I'm working on is:
+
+Year -------------> 6300
+Injury -----------> 6274
+Fatal (Y/N) ------> 5763 
+Species ----------> 3464
    
-   
-   
-   
-   
-   
+I see that the number of rows in Year and Injury is quite the same, which could be great, but we have to check them.
+On the other hand, we have only the half entries in Species comparing to Year ones.
+
+*Checking Year: 
+
+The min is 0, which is not possible, and the max, 2018.
+If we take a look,the 25% corresponds to 1942 so we could think the begginig of the records stars around 1910 (when Titanic sunk).
+
+
+
    
 
-The idea is to focus on 3 series of pd, name of the DataFrame: 
-Year, Injury and Species.
-
-I have to select the injury cases provoked by whithe sharks resulting in death.
-Once I got them, I need to sort them by year.
-Finally, I'm displaying a graph with the deaths caused by white sharks each year.
-   
-*Each row corresponds to a shark attack (https://www.kaggle.com/teajay/global-shark-attacks)  
 
 3. Use at least 5 data cleaning techniques inside a file named `clean.ipynb`
    - null values, columns drop, duplicated data, string manipulation, apply fn, categorize, regex, etc.
