@@ -5,9 +5,8 @@
 W2 Project - Data cleaning & wrangling
 
 ​
-## TODO's
+## HYPOTHESIS 
 ​
-1. Decide a hypothesis with which you will clean the data
 
 Since 1975, when Jaws was released, the white shark has been reknowed 
 as the most dangerous one over the years.
@@ -15,18 +14,23 @@ as the most dangerous one over the years.
 Let's see if that's true :)
 
 
-I selected the injury cases by years provoked by white sharks and 
-I compared them to the rest of species. 
-Once I got them, I need to sort them by year.
-Finally, I'm displaying a graph with the deaths caused by sharks each year.
-   
-*Each row corresponds to a shark attack (https://www.kaggle.com/teajay/global-shark-attacks)  
+## EXPLORING THE DATA 
 
+- Each row is an attack, so at first sight we could think there are a lot of accidents due to sharks.
+
+df.shape = 25723 rows, 24 series
+
+- On the other hand, if we chechl the data more in deep, we realize that the DataFrame is full on "NaN" results.
+
+- Ana
+ 
+ 
+There are some hidden series between "Sex" and "Species" that can't be seen in the raw DataFrame.
 
 2. Explore the data and write down what you have found
    - you can use: `df.describe()`, `df["column"]`, etc.
  
-df.shape = 25723 rows, 24 series
+
 
 There are some hidden series between "Sex" and "Species" that can't be seen in the raw DataFrame.
 
